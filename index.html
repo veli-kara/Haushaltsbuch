@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Haushaltsbuch</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsbuch</h1>
+        <div>
+            <button id="einkommen-button" class="button">Einkommen</button>
+            <button id="ausgaben-button" class="button">Ausgaben</button>
+            <button id="zusammenfassung-button" class="button">Zusammenfassung</button>
+        </div>
+    </header>
+    <form id="einkommen-form" class="hidden">
+        <h3>Einkommen</h3>
+        <label for="einkommen-betrag">Betrag</label>
+        <input type="number" id="einkommen-betrag" placeholder="Betrag eingeben" required>
+        <label for="einkommenkategorie">Kategorie</label>
+        <input type="text" id="einkommenkategorie" placeholder="Kategorie eingeben" required>
+        <label for="einkommen-zyklus">Einkommenzyklus</label>
+        <select id="einkommen-zyklus" style="margin-bottom: 10px;">
+            <option value="monatlich">Monatlich</option>
+            <option value="zweiwoehentlich">Zwei Wöchentlich</option>
+            <option value="woehentlich">Wöchentlich</option>
+        </select>
+    </select>
+    <label for="einkommen-monat">Monat</label>
+    <select id="einkommen-monat" style="margin-bottom: 10px;">
+        <option value="Januar">Januar</option>
+        <option value="Februar">Februar</option>
+        <option value="Maerz">März</option>
+        <option value="April">April</option>
+        <option value="Mai">Mai</option>
+        <option value="Juni">Juni</option>
+        <option value="Juli">Juli</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="Oktober">Oktober</option>
+        <option value="November">November</option>
+    </select>
+        <button type="submit" id="earnings" class="button">Hinzufügen</button>
+        <p id="income"></p>
+        <div id="notification" class="hidden" style="text-align: center;">Erfolgreich</div>
+    </form>
+ 
+    <form id="ausgaben-form" class="hidden">
+        <h3>Ausgaben</h3>
+        <label for="ausgaben-betrag">Betrag</label>
+        <input type="number" id="ausgaben-betrag" placeholder="Betrag eingeben" required>
+        <label for="ausgabenkategorie">Kategorie</label>
+        <input type="text" id="ausgabenkategorie" placeholder="Kategorie eingeben" required>
+        <label for="ausgaben-zyklus">Zyklus</label>
+        <select id="ausgaben-zyklus" style="margin-bottom: 10px;">
+            <option value="monatlich">Monatlich</option>
+            <option value="zweiwoehentlich">Zwei Wöchentlich</option>
+            <option value="woehentlich">Wöchentlich</option>
+        </select>
+        <label for="ausgaben-monat">Monat</label>
+        <select id="ausgaben-monat" style="margin-bottom: 10px;">
+            <option value="Januar">Januar</option>
+            <option value="Februar">Februar</option>
+            <option value="Maerz">März</option>
+            <option value="April">April</option>
+            <option value="Mai">Mai</option>
+            <option value="Juni">Juni</option>
+            <option value="Juli">Juli</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="Oktober">Oktober</option>
+            <option value="November">November</option>
+        </select>
+        <button type="submit" id="expences" class="button">Hinzufügen</button>
+        <p id="expence" style="color: green;"></p>
+        <div id="notification2" class="hidden" style="text-align: center;">Erfolgreich</div>
+    </form>
+    <div id="zusammenfassung-form" class="hidden" style="text-align: center;">
+        <!-- <h1>Zusammenfassung</h1> -->
+        <div id="einkommen-liste" class="hidden">
+            <h2>Einkommen</h2>
+            <ul id="einkommen-summary"></ul>
+            <!--<div id="edit">
+                <button>Edit</button>
+            </div>
+            <div id="delete">
+                <button>Delete</button>
+            </div>            
+        </div> -->
+        <div id="ausgaben-liste" class="hidden">
+            <h2>Ausgaben</h2>
+            <ul id="ausgaben-summary"></ul>
+        </div>
+        <label for="selected-month">Monat auswählen</label>
+        <select id="selected-month" onchange="monthSelect()" style="margin-bottom: 10px;">
+            <option value="empty">Monaten</option>
+            <option value="Januar">Januar</option>
+            <option value="Februar">Februar</option>
+            <option value="Maerz">März</option>
+            <option value="April">April</option>
+            <option value="Mai">Mai</option>
+            <option value="Juni">Juni</option>
+            <option value="Juli">Juli</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="Oktober">Oktober</option>
+            <option value="November">November</option>
+        </select>
+    </div>
+    <div id="zusammenfassung-summary"></div>
+    <script src="script.js"></script>
+</body>
+</html>

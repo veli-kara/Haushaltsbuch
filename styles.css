@@ -1,0 +1,113 @@
+body {
+    background-color: whitesmoke;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: yellow;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+
+.zusammenfassung-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 35vh;
+    height: 70vh;
+    margin: auto;
+    }
+
+input {
+    margin: 5px 0;
+    margin-bottom: 25px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: gray;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button:hover {background-color: lightgray}
+
+.button:active {
+  background-color: #757a75;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.dropbtn {
+    background-color: gray;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: lightgray;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: red;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+.show {
+    display: block;
+}
