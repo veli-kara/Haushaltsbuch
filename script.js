@@ -114,17 +114,21 @@ function updateSummary(){
         }
     })
 }
-
+// Filtering is a better option for deleting entries.
 function deleteEntry (index){
     eingabe_list.splice(index,1);
     updateSummary();
 }
 
+// This function deletes an entry and routet the user income page. 
+// It's a problematic method because it changes the index of the item
 function editIncomeEntry(index){
     deleteEntry(index);
     incomePage();
 }
 
+// This function deletes an entry and routet the user expence page. 
+// It's a problematic method because it changes the index of the item
 function editExpenceEntry(index){
     deleteEntry(index);
     expensePage();
