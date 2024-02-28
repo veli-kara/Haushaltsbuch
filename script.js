@@ -1,25 +1,3 @@
-/*function einkommenseite (){
-    document.getElementById("einkommen-form").classList.remove("hidden");
-    document.getElementById("ausgaben-form").classList.add("hidden");
-    document.getElementById("zusammenfassung-form").classList.add("hidden")
-    document.getElementById("notification").classList.add("hidden")
-}
-
-function ausgabenseite () {
-    document.getElementById("ausgaben-form").classList.remove("hidden");
-    document.getElementById("einkommen-form").classList.add("hidden");
-    document.getElementById("zusammenfassung-form").classList.add("hidden")
-    document.getElementById("notification").classList.add("hidden")
-}
-
-function zusammenfassungseite () {
-    document.getElementById("zusammenfassung-form").classList.remove("hidden");
-    document.getElementById("ausgaben-form").classList.add("hidden");
-    document.getElementById("einkommen-form").classList.add("hidden")
-    document.getElementById("notification").classList.add("hidden")
-}*/
-
-
 document.getElementById("einkommen-button").addEventListener("click", incomePage);
 
 function incomePage (){
@@ -70,9 +48,7 @@ function submitIncome (e){
     }
     eingabe_list.push(newInput);
     document.getElementById("notification").classList.remove("hidden");
-    //document.getElementById("income").innerHTML += "Ihr Einkommen " + incomeAmount + " Euro ist hinzugefügt";
     updateSummary();
-    //tabelle();
 }
 
 document.getElementById("ausgaben-form").addEventListener("submit", submitExpense)
@@ -97,7 +73,6 @@ function submitExpense(e){
     document.getElementById("notification2").classList.remove("hidden");
     updateSummary();
     document.getElementById("notification").classList.add("hidden");
-    //tabelle();
 }
 
 function updateSummary(){
@@ -168,148 +143,4 @@ function monthSelect (){
     })
 
     document.innerHTML("zusammenfassung-summary") += summaryList;
-    //document.getElementById("zusammenfassung-summary").classList.remove("hidden");
-    //summaryList.innerHTML = '';
-    //updateSummary()
 }
-
-
-
-/*function tabelle (){
-    eingabe_list.forEach(item => {
-        if (item.type === "income") {
-            let row = incomeSummary.insertRow();
-            let categoryCell = row.insertCell(0);
-            let amountCell = row.insertCell(1);
-            categoryCell.textContent = item.category;
-            amountCell.textContent = item.amount;
-        } else if (item.type === "expense") {
-            let row = expenseSummary.insertRow();
-            let categoryCell = row.insertCell(0);
-            let amountCell = row.insertCell(1);
-            categoryCell.textContent = item.category;
-            amountCell.textContent = item.amount;
-        }
-    })
-}*/
-
-//console.log(totalIncome);
-//console.log(eingabe_list);
-
-/*let new_list = [];
-//let strings = JSON.stringify(new_list);
-//localStorage.setItem("new_list", Object);
-function addincome (){
-    event.preventDefault();
-    let betrag = parseFloat(document.getElementById("einkommen-betrag").value);
-    let kategorie = document.getElementById("einkommenkategorie").value;
-    let zyklus = document.getElementById("einkommen-zyklus").value;
-    let monat = document.getElementById("einkommen-monat").value;
-    if (!betrag || !kategorie) return;
-    let income = {
-        type : "income",
-        title: kategorie,
-        circus: zyklus,
-        month: monat, 
-        amount: betrag,
-    }
-    new_list.push(income);
-    //document.getElementById("income").innerHTML += "Ihr Einkommen " + betrag + "Euro ist hinzugefügt";        
-}
-
-function addexpences () {
-    event.preventDefault();    
-    let betrag = parseFloat(document.getElementById("ausgaben-betrag").value);
-    let kategorie = document.getElementById("ausgabenkategorie").value;
-    let zyklus = document.getElementById("ausgaben-zyklus").value;
-    let monat = document.getElementById("ausgaben-monat").value;
-    if (!betrag || !kategorie) return;
-        let expence = {
-        type : "expence",
-        title: kategorie,
-        circus: zyklus,
-        month: monat, 
-        amount: betrag,
-        }
-    
-    new_list.push(expence);
-    //document.getElementById("expence").innerHTML += "Ihr Ausgabe " + betrag + "Euro ist hinzugefügt";
-}
-
-/*function total (type, new_list) {
-    var total= 0;
-    new_list.forEach(element => {
-        if (element.type == type){
-            total += element.amount;
-        }        
-    });
-    return total;
-}
-
-function einkommensum (){
-    var einkommentotal = 0
-    new_list.forEach(element =>{
-        if (element.type == "income"){
-            einkommentotal += element-amount;
-        }
-    })
-    return einkommentotal
-}
-
-//console.log(einkommentotal)
-
-//console.log(total("income", new_list))
-/*function toplam (){
-    let totaleinkommen= total("income", new_list);
-    document.getElementById("toplam").innerHTML += totaleinkommen;
-}
-/* function updateTotals() {
-    let totalIncome = total("income", new_list);
-    let totalExpenses = total("expence", new_list);
-    document.getElementById("income-total").textContent = "Total Income: " + totalIncome;
-    document.getElementById("expenses-total").textContent = "Total Expenses: " + totalExpenses;
-}
-
-//let totalIncome = total("income", new_list);
-//let totalExpenses = total("expense", new_list);
-//console.log("Total Income: " + totalIncome);
-//console.log("Total Expenses: " + totalExpenses);
-
-
-//totaleinkommen = total("income", new_list);
-//console.log (totaleinkommen);
-
-/*function calculateTotal (type, new_list){
-    let sum =0;
-    new_list.forEach(entry => {
-        if (entry.type == type){
-            sum += entry.amount;
-        }
-        
-    });
-    return sum
-}
-
-let incomesum = calculateTotal("income", new_list);
-
-
-
-/*document.getElementById("earnings").addEventListener("click", function(){
-    event.preventDefault()
-    var betrag = parseFloat(document.getElementById("einkommen-betrag").value)
-    var kategorie = document.getElementById("einkommenkategorie").value;
-    var zyklus = document.getElementById("einkommen-zyklus").value;
-    var monat = document.getElementById("einkommen-monat").value;
-    let income = {
-        type : "income",
-        title: kategorie,
-        circus: zyklus,
-        month: monat, 
-        amount: betrag,
-    }
-    new_list.push(income);
-    einkommenseite();
-})*/
-
-//console.log(new_list)
-//console.log(incomesum);
