@@ -107,7 +107,7 @@ function updateSummary(){
             editBtn.addEventListener("click", function() { editExpenceEntry (index);})
             listItem.textContent = `Monat: ${item.month} Kategorie: ${item.category}, Betrag: ${item.amount}`;
             deleteBtn.textContent = `Löschen`
-            editBtn.textContent= `BEarbeiten`
+            editBtn.textContent= `Bearbeiten`
             expenseSummary.appendChild(listItem);
             expenseSummary.appendChild(deleteBtn);  
             expenseSummary.appendChild(editBtn);          
