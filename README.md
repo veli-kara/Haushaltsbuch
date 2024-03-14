@@ -22,6 +22,14 @@ This is a simple web application for tracking household incomes and expenses. It
 - `styles.css`: CSS file containing styles for the web application.
 - `script.js`: JavaScript file containing the logic for adding incomes and expenses, displaying summaries, and handling user interactions.
 
+## Docker Deployment
+
+To deploy the application using Docker:
+
+1. Build the Docker image using the provided Dockerfile.
+2. Run a Docker container from the built image.
+3. Access the application through the exposed port.
+
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request.
